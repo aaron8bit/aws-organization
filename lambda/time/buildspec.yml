@@ -5,7 +5,7 @@ phases:
         nodejs: 10
   build:
     commands:
-      - cd time
+      - cd lambda/time
       - npm install time
       - export BUCKET='configuration-119178693678'
       - export DIRECTORY='Lambda-Functions/pipeline-artifacts'
@@ -15,4 +15,4 @@ artifacts:
   files:
     - template.yml
     - outputtemplate.yml
-  base-directory: time
+  base-directory: lambda/time
