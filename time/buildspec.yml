@@ -13,5 +13,6 @@ phases:
 artifacts:
   type: zip
   files:
-    - time/template.yml
-    - time/outputtemplate.yml
+    - template.yml
+    - outputtemplate.yml
+  base-directory: time
