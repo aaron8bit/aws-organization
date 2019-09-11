@@ -6,8 +6,9 @@ phases:
   build:
     commands:
       - npm install time
-      - export BUCKET=configuration-119178693678
-      - aws cloudformation package --template-file template.yml --s3-bucket $BUCKET --output-template-file outputtemplate.yml
+      - export BUCKET='configuration-119178693678'
+      - export DIRECTORY='Lambda-Functions/pipeline-artifacts/'
+      - aws cloudformation package --template-file lambda/template.yml --s3-bucket $BUCKET --s3-prefix $DIRECTORY --output-template-file outputtemplate.yml
 artifacts:
   type: zip
   files:
