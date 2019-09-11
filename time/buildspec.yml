@@ -5,6 +5,7 @@ phases:
         nodejs: 10
   build:
     commands:
+      - cd time
       - npm install time
       - export BUCKET='configuration-119178693678'
       - export DIRECTORY='Lambda-Functions/pipeline-artifacts'
